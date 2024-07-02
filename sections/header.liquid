@@ -9,7 +9,7 @@
       <!-- STEP 1: CREATE THE HAMBURGER MENU BUTTON -->
       <div class="-mr-2 -my-2 ml-3 md:hidden">
         <button x-on:click="mobileMenuOpen = true" type="button" class="bg-white p-2 inline-flex items-center justify-center focus:outline-none">
-          {%  render 'icon-menu' %}
+          {% render 'icon-menu' %}
         </button>
       </div>
 
@@ -89,18 +89,18 @@
                 <nav class="grid gap-y-7">
 
                 {% for link in linklists.main-menu.links %}
-                  {% assign link_handle = link.handle |  replace: '-', '_'  %}
+                  {% assign link_handle = link.handle | replace: '-', '_' %}
                   {% if link.links != blank %}
                     <div x-data="{ {{ link_handle }}: false }" class="relative">
                       <button 
-                        x-on:click="{{linke_handle}} = ! {{ link_handle }}"
+                        x-on:click="{{ link_handle }} = ! {{ link_handle }}"
                         type="button" 
                         class="text-base text-gray-500 hover:text-gray-900 flex items-center justify-between w-full">
                           <div>{{ link.title }}</div>
                           {% render 'icon-dropdown' %}
                       </button>
 
-                      <div x-show="{{ link_handle }}" class="grid gap-y-7 py-3"></div>
+                      <div x-show="{{ link_handle }}" class="grid gap-y-7 py-3">
                         {% for childlink in link.links %}
                           <a href="#" class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
                               <span class="ml-3 text-base font-medium text-gray-500">{{ childlink.title }}</span>
