@@ -13,10 +13,8 @@
         {% when 'featured_image' %}
             <img src="{{ article.image |  image_url: width: 320, height: 240 }}" alt="{{ article.image.alt }}" />
         {% when 'article_content' %}
-            <div>{{ article.content }}</div>
-            
+            <div>{{ article.content }}</div>            
         {% else %}
-            
     {% endcase %}
 {% endfor %}
 
