@@ -1,4 +1,4 @@
-<article>
+<article class="py-8">
     {% for block in section.blocks %}
         {% case block.type %}
             {% when 'article_title' %}
@@ -29,9 +29,20 @@
                     </div>
                 </div>
             {% when 'featured_image' %}
-                <img src="{{ article.image |  image_url: width: 320, height: 240 }}" alt="{{ article.image.alt }}" />
+                <div class="max-w-7xl bg-blue-100 rounded-lg mx-2 md:mx-auto overflow-hidden my-4">
+                    {% if article.image != blank %}
+                        <img class="w-full h-80 md:h-96 object-cover object-center" src="{{ article.image |  image_url: width: 320, height: 240 }}" alt="{{ article.image.alt }}" />  
+                    {% else %}
+                        {% assign placeholder_image = 'lifestyle-1' %}
+                        {{ placeholder_image | placeholder_svg_tag: 'w-full h-80 md:h-96 object-cover object-center p-5' }}
+                    {% endif %}
+                </div>                
             {% when 'article_content' %}
-                <div>{{ article.content }}</div>            
+                <div class="flex items-center justify-center">
+                    <div class="max-w-5xl px-4">
+                        {{ article.content }}
+                    </div>
+                </div>            
             {% else %}
         {% endcase %}
     {% endfor %}
