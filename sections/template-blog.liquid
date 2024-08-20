@@ -1,4 +1,4 @@
-{% paginate blog.articles by 12 %}
+{% paginate blog.articles by section.settings.number_of_blog_posts %}
     {% for article in blog.articles %}
         <div></div>
             {% if article.image != blank %}
@@ -15,3 +15,20 @@
         </div>
     {% endfor %}
 {% endpaginate %}
+
+{% schema %}
+{
+    "name": "blog",
+    "settings": [
+            {
+                "type": "range",
+                "id": "number_of_blog_posts",
+                "step": 1,
+                "min": 1,
+                "max": 6,
+                "label": "Blog posts per page",
+                "default": 3
+            }
+        ]
+}
+{% endschema %}
