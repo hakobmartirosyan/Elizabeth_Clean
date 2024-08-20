@@ -10,7 +10,7 @@
 
             {% if article.excerpt.size > 0 %}
             {% else %}
-                <p>{{ article.content | strip_html | truncatewords: 15 }}</p>                
+                <p>{{ article.content | strip_html | truncatewords: section.settings.max_words_no_excerpt }}</p>                
             {% endif %}
         </div>
     {% endfor %}
@@ -28,6 +28,12 @@
                 "max": 6,
                 "label": "Blog posts per page",
                 "default": 3
+            },
+            {
+                "type": "number",
+                "id": "max_words_no_excerpt",
+                "label": "Words count if no excerpt",
+                "default": 10
             }
         ]
 }
