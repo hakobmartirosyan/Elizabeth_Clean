@@ -12,6 +12,10 @@
     "template": {
       "type": "template-cart",
       "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
         "checkout-button": {
           "type": "checkout_button",
           "settings": {}
@@ -19,16 +23,12 @@
         "update-button": {
           "type": "update_button",
           "settings": {}
-        },
-        "subtotal": {
-          "type": "subtotal",
-          "settings": {}
         }
       },
       "block_order": [
+        "subtotal",
         "checkout-button",
-        "update-button",
-        "subtotal"
+        "update-button"
       ],
       "settings": {}
     }
