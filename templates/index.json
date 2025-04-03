@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "featured-collection": {
@@ -7,9 +16,27 @@
         "featured_collection": "",
         "number_of_products_to_show": 4
       }
+    },
+    "featured_collection_AbtdJt": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Shoes",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
+      }
+    },
+    "featured_collection_LqJ44Q": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
-    "featured-collection"
+    "featured-collection",
+    "featured_collection_AbtdJt",
+    "featured_collection_LqJ44Q"
   ]
 }
