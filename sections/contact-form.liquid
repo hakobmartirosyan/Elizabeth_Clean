@@ -1,10 +1,20 @@
 <div class="flex flex-col items-center">
     {% form 'contact' %}
-        <label for="contact_name">Name</label>
-        <input type="text" name="contact[name]" id="contact_name">
+        <div class="mx-w-6xl mx-auto justify-center flex iem-center px-4">
+            <div class="flex px-1 mb-3">
+                <div class="px-3 md:w1/2">
+                    <label for="contact_name">Name</label>
+                    <input type="text" name="contact[name]" id="contact_name">
+                </div>
+                <div class="px-3 md:w1/2">
+                    <label for="contact_email">Email address</label>
+                    <input type="email" name="contact[email]" id="contact_email">
+                </div>
+            </div>
+        </div>
 
-        <label for="contact_email">Email address</label>
-        <input type="email" name="contact[email]" id="contact_email">
+
+
     
         <label for="contact_message">Message</label>
         <textarea name="contact[body]" id="contact_message"></textarea>
